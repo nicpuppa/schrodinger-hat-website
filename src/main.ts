@@ -15,4 +15,4 @@ const i18n = new VueI18n({
 createApp({
   i18n,
   render: () => h(App)
-}).use(router).mount('#app');
+}).use(router).use(router).use(router).use(router).mount('#app');
