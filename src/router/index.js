@@ -1,5 +1,4 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import RedirectVideo from '../views/RedirectVideo.vue';
 import CodeConduct from '../views/CodeConduct.vue';
@@ -7,8 +6,6 @@ import EventList from '../views/EventList.vue';
 import Event from '../views/Event.vue';
 import Team from '../views/Team.vue';
 import TeamMember from '../views/TeamMember.vue';
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -48,8 +45,8 @@ const routes = [
   },
 ];
 
-const router = new VueRouter({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 
