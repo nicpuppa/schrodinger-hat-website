@@ -47,7 +47,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import NyanCat from '@/components/NyanCat.vue';
 import SeparatorSingleLine from '@/components/separator/SingleLine.vue';
 

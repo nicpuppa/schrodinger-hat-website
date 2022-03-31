@@ -60,7 +60,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import text from '../i18n/messages.json';
 
 export default {

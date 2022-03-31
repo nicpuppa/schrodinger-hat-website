@@ -23,16 +23,32 @@
             <div class="description">
               <h1>{{ $t(`team.${teammember}.name`) }}</h1>
               <div class="socialIcons">
-                <a v-if="$t(`team.${teammember}.github_url`).length > 1" v-bind:href="$t(`team.${teammember}.github_url`)" target="_blank">
+                <a
+                  v-if="$t(`team.${teammember}.github_url`).length > 1"
+                  v-bind:href="$t(`team.${teammember}.github_url`)"
+                  target="_blank"
+                >
                   <i class="mobile-menu-icon fab fa-github"></i>
                 </a>
-                <a v-if="$t(`team.${teammember}.linkedin_url`).length > 1"  v-bind:href="$t(`team.${teammember}.linkedin_url`)" target="_blank">
+                <a
+                  v-if="$t(`team.${teammember}.linkedin_url`).length > 1"
+                  v-bind:href="$t(`team.${teammember}.linkedin_url`)"
+                  target="_blank"
+                >
                   <i class="mobile-menu-icon fab fa-linkedin"></i>
                 </a>
-                <a v-if="$t(`team.${teammember}.twitter_url`).length > 1"  v-bind:href="$t(`team.${teammember}.twitter_url`)" target="_blank">
+                <a
+                  v-if="$t(`team.${teammember}.twitter_url`).length > 1"
+                  v-bind:href="$t(`team.${teammember}.twitter_url`)"
+                  target="_blank"
+                >
                   <i class="mobile-menu-icon fab fa-twitter"></i>
                 </a>
-                <a v-if="$t(`team.${teammember}.website`).length > 1" v-bind:href="$t(`team.${teammember}.website`)" target="_blank">
+                <a
+                  v-if="$t(`team.${teammember}.website`).length > 1"
+                  v-bind:href="$t(`team.${teammember}.website`)"
+                  target="_blank"
+                >
                   <i class="mobile-menu-icon fa fa-cloud"></i>
                 </a>
               </div>
@@ -41,7 +57,7 @@
                 :key="team.permalink"
                 :to="`/team/${$t(`team.${teammember}.permalink`)}`"
               >
-                <p class="user-profile-link">{{$t(linkText)}}</p>
+                <p class="user-profile-link">{{ $t(linkText) }}</p>
               </router-link>
             </div>
           </div>
@@ -51,7 +67,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import text from '../i18n/messages.json';
 
 export default {
@@ -133,7 +149,7 @@ $color_grey_dark: $nord2;
     }
 
     .socialIcons {
-      padding: .2em 0;
+      padding: 0.2em 0;
 
       a {
         display: inline-block;
