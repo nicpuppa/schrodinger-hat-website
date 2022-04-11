@@ -61,9 +61,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from '@vue/runtime-core';
 import text from '../i18n/messages.json';
 
-export default {
+export default defineComponent({
   name: 'Event',
   data() {
     return {
@@ -71,8 +72,9 @@ export default {
     };
   },
   mounted() {
-    const eventKey = this.$route.params.event;
-    if (text.it.events[eventKey] !== undefined) {
+    const { event } = this.$route?.params;
+    const { events } = text?.it;
+    if (events[event] !== undefined) {
       this.eventKey = eventKey;
     }
   },
@@ -96,7 +98,7 @@ export default {
       return calendarString;
     },
   },
-};
+});
 </script>
 <style scoped lang="scss">
 .event {

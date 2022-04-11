@@ -18,19 +18,19 @@
 export default {
   name: 'NyanCat',
   mounted: () => {
-    let scrollInterval = null;
+    let scrollInterval: number | null = null;
     scrollInterval = setInterval(() => {
-      const parentScrollHeight = document.querySelector('.nyancat-wrapper').parentNode.scrollHeight;
+      const elementWrapper = <HTMLElement>document.querySelector('.nyancat-wrapper');
+      const parentScrollHeight = (<Element>elementWrapper.parentNode).scrollHeight;
       if (window.pageYOffset >= parentScrollHeight - 400) {
-        document.querySelector('.nyancat-wrapper').classList.add('loaded');
+        elementWrapper.classList.add('loaded');
 
         setTimeout(() => {
-          const nyancatWrapper = document.querySelector('.nyancat-wrapper');
-          nyancatWrapper.classList.remove('loaded');
-          nyancatWrapper.style.display = 'none';
+          elementWrapper.classList.remove('loaded');
+          elementWrapper.style.display = 'none';
         }, 8000);
 
-        clearInterval(scrollInterval);
+        clearInterval(<number>scrollInterval);
       }
     }, 200);
   },

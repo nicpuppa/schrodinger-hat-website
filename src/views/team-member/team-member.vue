@@ -46,9 +46,11 @@
 </template>
 
 <script lang="ts">
-import text from '../i18n/messages.json';
+import { defineComponent } from '@vue/runtime-core';
+import text from '../../i18n/messages.json';
+import { TeamMemberModel } from './team-member.model.vue';
 
-export default {
+export default defineComponent({
   name: 'Team',
   data() {
     return {
@@ -56,12 +58,14 @@ export default {
     };
   },
   mounted() {
-    const teamMember = this.$route.params.member;
-    if (text.it.team[teamMember] !== undefined) {
-      this.teamMember = teamMember;
-    }
+    const { member } = this.$route?.params;
+    const { team }: { team: TeamMemberModel } = text?.it;
+
+    if (!team && (<TeamMemberModel>team).hasOwnProperty(<string>member)) return;
+
+    this.teamMember = <string>member;
   },
-};
+});
 </script>
 <style scoped lang="scss">
 .photo {
