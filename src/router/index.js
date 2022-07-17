@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import RedirectVideo from '../views/RedirectVideo.vue';
 import CodeConduct from '../views/CodeConduct.vue';
+import ProjectList from "../views/ProjectList.vue";
 import EventList from '../views/EventList.vue';
 import Event from '../views/Event.vue';
 import Team from '../views/Team.vue';
@@ -25,6 +26,11 @@ const routes = [
     path: '/code-of-conduct',
     name: 'CodeOfConduct',
     component: CodeConduct,
+  },
+  {
+    path: '/projects',
+    name: 'ProjectList',
+    component: ProjectList,
   },
   {
     path: '/events',

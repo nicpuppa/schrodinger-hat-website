@@ -4,6 +4,7 @@
       <div class="navbar">
         <a href="https://github.com/Schrodinger-Hat" target="_blank">GitHub</a>
         <router-link to="/team">{{ $t('message.navbar.team') }}</router-link>
+        <router-link to="/projects">{{ $t('message.navbar.projects') }}</router-link>
         <router-link to="/events">{{ $t('message.navbar.events') }}</router-link>
         <router-link to="/code-of-conduct">{{ $t('message.navbar.codeofconduct') }}</router-link>
         <a href="https://ign.schrodinger-hat.it" target="_blank"> ImageGoNord </a>
