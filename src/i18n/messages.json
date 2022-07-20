@@ -5,10 +5,14 @@
         "read-more": "Leggi di più",
         "go-to-event": "Registrati",
         "go-to-donation": "Supportaci",
-        "go-to-cfp": "Sessionize CFP"
+        "go-to-cfp": "Sessionize CFP",
+        "search-button": "Cerca",
+        "search-placeholder": "Cerca progetti",
+        "search-category": "Categorie"
       },
       "navbar": {
         "team": "Team",
+        "projects": "Progetti",
         "events": "Eventi",
         "codeofconduct": "Codice di Condotta"
       },
@@ -115,10 +119,14 @@
         "read-more": "Read more",
         "go-to-event": "Sign Up",
         "go-to-donation": "Support us",
-        "go-to-cfp": "Sessionize CFP"
+        "go-to-cfp": "Sessionize CFP",
+        "search-button": "Search",
+        "search-placeholder": "Find a project",
+        "search-category": "Category"
       },
       "navbar": {
         "team": "Team",
+        "projects": "Projects",
         "events": "Events",
         "codeofconduct": "Code of Conduct"
       },
