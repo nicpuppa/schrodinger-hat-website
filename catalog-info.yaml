@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: schrodinger-hat-website
+  annotations:
+    github.com/project-slug: nicpuppa/schrodinger-hat-website
+spec:
+  type: other
+  lifecycle: unknown
+  owner: guests
